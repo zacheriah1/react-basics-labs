@@ -95,3 +95,42 @@ form {
   width: 50%;
   margin: auto;
 }
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.low {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.medium {
+  background-color: goldenrod;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.high {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+}

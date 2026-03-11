@@ -11,6 +11,7 @@ function App() {
       title: 'Dishes',
       description: 'Empty dishwasher',
       deadline: 'Today',
+      priority: 'Medium',
       done: false,
     },
     {
@@ -18,6 +19,7 @@ function App() {
       title: 'Laundry',
       description: 'Fold clothes and put away',
       deadline: 'Tomorrow',
+      priority: 'Low',
       done: false,
     },
     {
@@ -25,6 +27,7 @@ function App() {
       title: 'Tidy up',
       description: '',
       deadline: 'Today',
+      priority: 'High',
       done: false,
     },
   ]);
@@ -33,6 +36,7 @@ function App() {
     title: '',
     description: '',
     deadline: '',
+    priority: 'Medium',
   });
 
   const doneHandler = (taskIndex) => {
@@ -55,6 +59,7 @@ function App() {
       title: formState.title,
       description: formState.description,
       deadline: formState.deadline,
+      priority: formState.priority,
       done: false,
     };
 
@@ -64,6 +69,7 @@ function App() {
       title: '',
       description: '',
       deadline: '',
+      priority: 'Medium',
     });
   };
 
@@ -82,14 +88,15 @@ function App() {
 
       {tasks.map((task, index) => (
         <Task
-          key={task.id}
-          title={task.title}
-          description={task.description}
-          deadline={task.deadline}
-          done={task.done}
-          markDone={() => doneHandler(index)}
-          deleteTask={() => deleteHandler(index)}
-        />
+        key={task.id}
+        title={task.title}
+        description={task.description}
+        deadline={task.deadline}
+        priority={task.priority}
+        done={task.done}
+        markDone={() => doneHandler(index)}
+        deleteTask={() => deleteHandler(index)}
+      />
       ))}
 
       <AddTaskForm
